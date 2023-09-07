@@ -10,6 +10,10 @@ import Root from "./routes/Root";
 import Index from './routes/Index';
 import Contact from './routes/Contact'
 import Faq from './routes/Faq'
+import UserRoot from './routes/UserRoot';
+import ErrorPage from './routes/ErrorPage';
+import UserEdit from './routes/UserEdit';
+import UserInfo from './routes/UserInfo';
 
 
 // Routers
@@ -17,6 +21,7 @@ const routes = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true, element: <Index />
@@ -31,6 +36,20 @@ const routes = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '/user',
+        element: <UserRoot />,
+        children: [
+            {
+                path: 'info',
+                element: <UserInfo />
+            },
+            {
+                path: 'edit',
+                element: <UserEdit />
+            }
+        ]
+    }
     
 ])
 

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -10,13 +11,17 @@ const Header = () => {
         <h1>Learn React Router</h1>
         <ul>
             <li>
-                <a href="http://">home</a>
+                <Link to="/">home</Link>
             </li>
             <li>
-                <a href="http://">faq</a>
+                <Link to="faq">faq</Link>
             </li>
-
-            <a href="http://">contact</a>
+            <li>
+              <Link to="contact">contact</Link>
+            </li>
+            <li>
+              <Link to="user">user</Link>
+            </li>            
         </ul>
     </div>
     </Fragment>
