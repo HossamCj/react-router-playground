@@ -88,3 +88,8 @@ body {
 .active {
   color: red !important;
 }
+
+.header .active {
+  color: lightcoral;
+  font-weight: bold;
+}
