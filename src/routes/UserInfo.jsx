@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
 
 const UserIfno = () => {
-    console.log('UserInfo Logged In')
+  const { userId } = useParams()
+  
   return (
     <Fragment>
         <h2>UserIfno</h2>

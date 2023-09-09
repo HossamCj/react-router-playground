@@ -40,12 +40,13 @@ const routes = createBrowserRouter([
         path: '/user',
         element: <UserRoot />,
         children: [
+            {index: true, element: <div>أهلا بكم - Welcome</div>},
             {
-                path: 'info',
+                path: ':userId/info',
                 element: <UserInfo />
             },
             {
-                path: 'edit',
+                path: ':userId/edit',
                 element: <UserEdit />
             }
         ]

@@ -4,16 +4,18 @@ import { Link, Outlet } from 'react-router-dom';
 
 
 const UserRoot = () => {
+    const userId = 1
+  
     return (
       <div className="wrapper2">
         <div className="nav">
           <ul>
             
             <li>
-              <Link to="info">User Info</Link>
+              <Link to={`${userId}/info`}>User Info</Link>
             </li>
             <li>
-              <Link to="edit">User Edit</Link>
+              <Link to={`${userId}/edit`}>User Edit</Link>
             </li>
             
             <li>
