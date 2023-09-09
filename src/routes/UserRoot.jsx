@@ -1,10 +1,19 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 
 
 const UserRoot = () => {
     const userId = 1
+
+    const navigate = useNavigate()
+
+    const logoutHandler = () => {
+      //API
+      navigate('/')
+    }
+    
+    
   
     return (
       <div className="wrapper2">
@@ -21,6 +30,20 @@ const UserRoot = () => {
             <li>
                 <Link to="/">Home</Link>
             </li>
+
+            <li style={
+              {
+                cursor: "pointer",
+                backgroundColor: "orange",
+                width: "100px",
+                padding: "5px",
+                color: "#333"
+              }}
+               onClick={ logoutHandler }
+            >
+              Logout
+            </li>
+            
           </ul>
         </div>
         <div className="content">

@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
 const UserIfno = () => {
-  const { userId } = useParams()
+  // const { userId } = useParams()
   
   return (
     <Fragment>
