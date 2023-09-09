@@ -10,7 +10,7 @@ const UserRoot = () => {
 
     const logoutHandler = () => {
       //API
-      navigate('/')
+      navigate('/', {replace: true})
     }
     
     
